@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, LogIn, UserPlus } from "lucide-react";
 import { logo } from "../data";
+import { Link } from "react-router-dom"
 
 const Logo = () => (
    <motion.div
@@ -68,20 +69,24 @@ const Header = () => {
 
             {/* Desktop Actions */}
             <div className="hidden lg:flex space-x-4">
-               <motion.button
-                  className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300 flex items-center gap-2"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-               >
-                  <LogIn /> Sign In
-               </motion.button>
-               <motion.button
-                  className="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-md hover:bg-blue-600 hover:text-white transition duration-300 flex items-center gap-2"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-               >
-                  <UserPlus /> Sign Up
-               </motion.button>
+               <Link to="/login">
+                  <motion.button
+                     className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300 flex items-center gap-2"
+                     whileHover={{ scale: 1.05 }}
+                     transition={{ type: "spring", stiffness: 300 }}
+                  >
+                     <LogIn /> Sign In
+                  </motion.button>
+               </Link>
+               <Link to="/signup">
+                  <motion.button
+                     className="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-md hover:bg-blue-600 hover:text-white transition duration-300 flex items-center gap-2"
+                     whileHover={{ scale: 1.05 }}
+                     transition={{ type: "spring", stiffness: 300 }}
+                  >
+                     <UserPlus /> Sign Up
+                  </motion.button>
+               </Link>
             </div>
          </div>
 
@@ -105,20 +110,24 @@ const Header = () => {
                         {link.label}
                      </motion.a>
                   ))}
-                  <motion.button
-                     className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center gap-2"
-                     whileHover={{ scale: 1.05 }}
-                     transition={{ type: "spring", stiffness: 300 }}
-                  >
-                     <LogIn /> Sign In
-                  </motion.button>
-                  <motion.button
-                     className="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300 flex items-center gap-2"
-                     whileHover={{ scale: 1.05 }}
-                     transition={{ type: "spring", stiffness: 300 }}
-                  >
-                     <UserPlus /> Sign Up
-                  </motion.button>
+                  <Link to="/login">
+                     <motion.button
+                        className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center gap-2"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                     >
+                        <LogIn /> Sign In
+                     </motion.button>
+                  </Link>
+                  <Link to="/signup">
+                     <motion.button
+                        className="border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300 flex items-center gap-2"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                     >
+                        <UserPlus /> Sign Up
+                     </motion.button>
+                  </Link>
                </div>
             </motion.div>
          )}

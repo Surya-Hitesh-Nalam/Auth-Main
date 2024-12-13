@@ -1,10 +1,10 @@
-import Header from "./pages/Header"
-import Hero from "./pages/Hero"
-import CourseCards from "./pages/CourseCards"
-import AboutMe from "./pages/About"
-import Footer from "./pages/Footer"
-import Connections from "./pages/Connections"
-import HowItWorks from "./pages/HowItWorks"
+import Header from "./Header"
+import Hero from "./Hero"
+import CourseCards from "./CourseCards"
+import AboutMe from "./About"
+import Footer from "./Footer"
+import Connections from "./Connections"
+import HowItWorks from "./HowItWorks"
 
 function DashBoardPage() {
   return (
