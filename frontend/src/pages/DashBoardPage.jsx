@@ -6,7 +6,7 @@ import Footer from "./pages/Footer"
 import Connections from "./pages/Connections"
 import HowItWorks from "./pages/HowItWorks"
 
-function App() {
+function DashBoardPage() {
   return (
     <div >
       <Header />
@@ -20,4 +20,4 @@ function App() {
   )
 }
 
-export default App
+export default DashBoardPage
